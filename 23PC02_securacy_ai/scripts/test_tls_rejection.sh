@@ -1,5 +1,3 @@
-# ==============================================================================
-# Script Name: test_tls_rejection.sh
 # Description: Automated test script for TC-007-01 and TC-007-02.
 #              Verifies that a target endpoint actively rejects TLS 1.2 and 
 #              TLS 1.0 connections.
@@ -10,10 +8,8 @@
 TARGET=${1:-"api.fooddelivery.local"}
 PORT=${2:-443}
 
-echo "============================================================"
 echo " Starting Automated TLS Policy Enforcement Test"
 echo " Target: $TARGET:$PORT"
-echo "============================================================"
 
 # Function to test a specific TLS version
 test_tls_version() {
