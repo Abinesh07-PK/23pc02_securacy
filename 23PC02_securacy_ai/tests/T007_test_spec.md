@@ -8,7 +8,7 @@ The Azure Application Gateway and API Management have been configured to enforce
 - Target API endpoint is accessible (e.g., `api.fooddelivery.local`).
 - OpenSSL (`openssl`), cURL (`curl`), and Nmap (`nmap`) are installed on the tester's machine.
 - Access to the mobile application binary (APK/IPA) running in a test emulator or physical device.
-- An interception proxy (e.g., Burp Suite, OWASP ZAP) is configured with its root CA certificate installed on the mobile test device.
+- An interception proxy (e.g., Burp Suite) is configured with its root CA certificate installed on the mobile test device.
 
 ## Test Cases
 
