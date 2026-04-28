@@ -1,5 +1,5 @@
 ## Threat Summary
-While Web Application Firewalls (WAF) mitigate injection threats (e.g., SQLi, XSS), overly aggressive rule sets often block legitimate user traffic. In a food delivery context, restaurant names frequently contain apostrophes (e.g., "O'Reilly's"), and menu descriptions contain currency symbols and decimals. False positives disrupt the business and frustrate users, leading to loss of revenue.
+While Web Application Firewalls (WAF) mitigate injection threats (e.g., SQLi), overly aggressive rule sets often block legitimate user traffic. In a food delivery context, restaurant names frequently contain apostrophes (e.g., "O'Reilly's"), and menu descriptions contain currency symbols and decimals. False positives disrupt the business and frustrate users, leading to loss of revenue.
 
 ## Mitigation Summary
 The WAF has been tuned to mitigate injection attacks while allowing specific, safe character combinations for known input fields (e.g., `restaurant_name`, `menu_price`, `description`). The rule set uses parameterized validation and semantic awareness rather than naive regex blocking.
