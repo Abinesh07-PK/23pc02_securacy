@@ -23,11 +23,11 @@ test_tls_version() {
     
     # Check for common OpenSSL rejection signatures
     if echo "$OUTPUT" | grep -qiE "handshake failure|no protocols available|alert protocol version|write:errno=0|Connection reset by peer"; then
-        echo -e "\033[0;32m[PASS]\033[0m"
+        echo -e "[PASS]"
         echo "  -> Handshake successfully rejected as expected."
         return 0
     else
-        echo -e "\033[0;31m[FAIL]\033[0m"
+        echo -e "[FAIL]"
         echo "  -> Handshake was NOT rejected. Vulnerability may still exist."
         echo "  -> Output snapshot: $(echo "$OUTPUT" | head -n 3 | tr -d '\n')"
         return 1
@@ -46,9 +46,9 @@ if [ $? -ne 0 ]; then FAILED=1; fi
 
 echo "============================================================"
 if [ $FAILED -eq 0 ]; then
-    echo -e "Overall Status: \033[0;32mPASS\033[0m - Mitigation is effective."
+    echo -e "Overall Status: PASS - Mitigation is effective."
     exit 0
 else
-    echo -e "Overall Status: \033[0;31mFAIL\033[0m - Vulnerabilities found."
+    echo -e "Overall Status: FAIL - Vulnerabilities found."
     exit 1
 fi
