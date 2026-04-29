@@ -67,7 +67,7 @@ The Azure Application Gateway and API Management have been configured to enforce
   3. Launch the mobile application and attempt to log in.
 - **Expected Result:** The application should detect that the certificate presented by the proxy does not match the pinned certificate.
 - **Pass Criteria:** The application drops the connection, displays a generic network error to the user, and no HTTP request data is visible in the proxy's HTTP history.
-- **Tools/Commands:** Burp Suite Professional / Community, Android Emulator / iOS Simulator.
+- **Tools/Commands:** Burp Suite Professional.
 
 ## Compliance Check
 - **PCI-DSS v4.0 Req 4.2.1:** Strong cryptography and security protocols are implemented to safeguard PAN during transmission over open, public networks.
